@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>列表table</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../plug/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+
+		<style type="text/css">
+			html,body{font-size: 11px;}
+
+			table,
+			thead,
+			tbody th tr td,th{
+				font-size: 11px;
+				text-align: center;
+			}
+			.form-group{
+				margin-left: 15px;
+			}
+			.form-group:first-child{
+				margin-left: 40px;
+			}
+			.formStyle{
+				margin-top:8px; 
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="row">
+			
+			
+				<!-- search -->
+			<div class="row list-inline">
+					<form action="#" class="form-inline formStyle" method="post">
+					  <div class="form-group">
+					    <label for="usernameInput1"><strong>用户名：</strong></label>
+					    <input type="text" class="form-control" id="usernameInput1" placeholder="请输入用户名">
+					  </div>
+					  <div class="form-group">
+					    <label for="telInput1"><strong>手机号码：</strong></label>
+					    <input type="tel" class="form-control" id="telInput1" placeholder="请输入电话号码">
+					  </div>
+					   <div class="form-group">
+					    <label for="usernameInput1"><strong>ID：</strong></label>
+					    <input type="text" class="form-control" id="usernameInput1" placeholder="请输入用户名ID">
+					  </div>
+
+					  <button type="submit" class="btn btn-default btn-sm btn-search" style="margin-left: 10px;"><i class="fa fa-search">查询</i></button>
+					</form>
+
+					<div class="list-inline col-lg-offset-2" style="margin-top: 10px;margin-left: 15px;">
+						<!-- 添加用户按钮 -->
+						<a href="addUser.html" class="btn btn-success btn-sm"><i class="fa fa-plus" aria-hidden="true">添加</i></a>
+						<!-- 导出表 -->
+						<button type="button" class="btn btn-success btn-sm col-lg-offset-2"><i class="fa fa-download" aria-hidden="true">导出</i></button>
+					</div>
+			</div>
+				
+		</div>
+			
+		<hr>
+
+
+		<!-- table -->
+
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<th><input type="checkbox" class="allcheck"></th>
+						<th>ID</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>出身日期</th>
+						<th>家庭地址</th>
+						<th>email</th>
+						<th>手机号码</th>
+						<th>注册时间</th>
+						<th>上次登录时间</th>
+						<th>上次登录ip</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th><input type="checkbox" class="checklist" value="1"></th>
+						<td>1</td>
+						<td>王斌</td>
+						<td>男</td>
+						<td>1990-06-21</td>
+						<td>北京市东城区前门大街83号胡同006户</td>
+						<td>785022207@qq.com</td>
+						<td>17647360621</td>
+						<td>1906-20-30 11:25:33</td>
+						<td>2019-09-25 11:25:33</td>
+						<td>192.168.2.152</td>
+						<td class="table_editStyle">
+							<a href="#" class="btn btn-danger btn-sm" role="button"><i class="fa fa-trash-o" aria-hidden="true">删除</i></a>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target='#myModal'><i class="fa fa-pencil-square-o">编辑</i></button >
+						</td>
+					</tr>
+					<tr>
+						<th><input type="checkbox" class="checklist" value="2"></th>
+						<td>2</td>
+						<td>王斌</td>
+						<td>男</td>
+						<td>1990-06-21</td>
+						<td>北京市东城区前门大街83号胡同006户</td>
+						<td>785022207@qq.com</td>
+						<td>17647360621</td>
+						<td>1906-20-30 11:25:33</td>
+						<td>2019-09-25 11:25:33</td>
+						<td>192.168.2.152</td>
+						<td class="table_editStyle">
+							<a href="#" class="btn btn-danger btn-sm" role="button"><i class="fa fa-trash-o" aria-hidden="true">删除</i></a>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target='#myModal'><i class="fa fa-pencil-square-o">编辑</i></button >
+						</td>
+					</tr>
+					<tr>
+						<th><input type="checkbox" class="checklist" value="3"></th>
+						<td>3</td>
+						<td>王斌</td>
+						<td>男</td>
+						<td>1990-06-21</td>
+						<td>北京市东城区前门大街83号胡同006户</td>
+						<td>785022207@qq.com</td>
+						<td>17647360621</td>
+						<td>1906-20-30 11:25:33</td>
+						<td>2019-09-25 11:25:33</td>
+						<td>192.168.2.152</td>
+						<td class="table_editStyle">
+							<a href="#" class="btn btn-danger btn-sm" role="button"><i class="fa fa-trash-o" aria-hidden="true">删除</i></a>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target='#myModal'><i class="fa fa-pencil-square-o">编辑</i></button >
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<nav aria-label="...">
+			  <ul class="pagination">
+			    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+			    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			    ...
+			  </ul>
+			</nav>
+		</div>
+
+
+
+
+<!-- 编辑model -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width: 1280px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">
+					修改用户信息
+				</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" style="padding: 20px 0">
+			  <div class="form-group">
+			    <label for="inputUsername2" class="col-sm-3 control-label"><strong>用户名：</strong></label>
+			    <div class="col-sm-6">
+			      <input type="text" class="form-control" id="inputUsername2" placeholder="请输入用户名">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword2" class="col-sm-3 control-label"><strong>密码：</strong></label>
+			    <div class="col-sm-6">
+			      <input type="password" class="form-control" id="inputPassword2" placeholder="请设置密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputTel2" class="col-sm-3 control-label"><strong>手机号码：</strong></label>
+			    <div class="col-sm-6">
+			      <input type="tel" class="form-control" id="inputTel2" placeholder="请设置手机号码" required>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail2" class="col-sm-3 control-label"><strong>邮箱：</strong></label>
+			   <div class="col-sm-6">
+			      <input type="tel" class="form-control" id="inputEmail2" placeholder="请输入用邮箱">
+			    </div>
+			  </div>
+			   <div class="form-group">
+			    <label for="inputSex2" class="col-sm-3 control-label"><strong>邮箱：</strong></label>
+			    <div class="col-sm-6">
+			      <label class="radio-inline">
+			        <input type="radio" name="sex" id="inlineRadioSex1" value="1" checked> 男
+			      </label>
+			      <label class="radio-inline">
+			        <input type="radio" name="sex" id="inlineRadio2" value="2"> 女
+			      </label>
+			    </div>
+			  </div>
+
+			   <div class="form-group">
+			    <label for="inputBm2" class="col-sm-3 control-label"><strong>部门：</strong></label>
+			    <div class="col-sm-6">
+			      <select class="form-control">
+			        <option>技术部</option>
+			        <option>财务部</option>
+			        <option>市场部</option>
+			        <option>配送部</option>
+			        <option>总裁办</option>
+			      </select>
+			    </div>
+			  </div>
+
+			   <div class="form-group">
+			    <label for="inputNote2" class="col-sm-2 control-label"><strong>备注：</strong></label>
+			    <div class="col-sm-6">
+			     	<textarea name="note" class="form-control" rows="3" id="inputNote2"></textarea>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-6">
+			      <button type="submit" class="btn btn-default">提交</button>
+			    </div>
+			  </div>
+			</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" class="btn btn-primary">
+					提交更改
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+
+
+		<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+
+		<script>
+			
+			$(function(){
+				
+				
+				// alert(flag);
+				$('.allcheck').click(function(){
+					var flag = $('.allcheck').prop("checked");
+					var  len = $('.checklist').length;
+						// alert(len);
+						if (flag) {
+							
+							$('.checklist').prop("checked",true);
+
+							var checkedLength = $('.checklist').prop("checked",true).length;
+							// alert(checkedLength);
+							if(len < checkedLength){
+								$('.allcheck').prop("checked",false);
+							}
+							
+						}else{
+							$('.checklist').prop("checked",false);
+						}
+					
+				});
+
+
+			});
+		</script>
+	</body>
+</html>

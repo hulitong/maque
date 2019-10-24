@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/plug/bootstrap-4.3.1/css/bootstrap.min.css"/>
+	<style>
+		html,body{background-color: gray(.7)}
+		.login-box{
+			width: 500px;
+			height: 280px;
+			margin:40px auto;
+			padding: 10px;
+			background-color: #66CC99;
+			border-radius: 8px;
+			box-shadow:4px 3px 4px 3px #66FF99;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="header">
+			<h3 class="text-center" style="margin-top: 120px">欢迎来到麻雀巢穴</h3>
+		</div>
+		<div class="login-box center">
+			<form action="{:url('Login/checkIn')}" class="form-horizontal" method="POST">
+			  <div class="form-group">
+			    <label for="inputAccont1" class="col-sm-2 control-label">账号：</label>
+			    <div class="col-sm-10">
+			      <input type="text" name="username" class="form-control" id="inputAccont1" placeholder="请输入您的账号">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPwd2" class="col-sm-2 control-label">密码：</label>
+			    <div class="col-sm-10">
+			      <input type="password" name="pwd" class="form-control" id="inputPwd2" placeholder="请输入您的密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox"> 记住我的账号
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-info">登录</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+	</div>
+	 <!-- jQuery -->
+    <script type="text/javascript" src="__ADMIN__/js/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script type="text/javascript" src="__ADMIN__/plug/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

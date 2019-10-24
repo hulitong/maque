@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>table list</title>
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/plug/bootstrap-4.3.1/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="__ADMIN__/plug/font-awesome-4.7.0/css/font-awesome.css">
+	<style>
+		html,body{font-size: 13px;}
+		.row{
+			padding: 10px 5px;
+		}
+		.search-ct{margin-left: 15px;}
+	</style>
+</head>
+<body>
+	
+	<div class="container-fluid">
+		<div class="row col-lg-12">
+			<form action="{:url('Root/searchRoot');}" class="form-inline" method="post">
+			  <div class="form-group search-ct">
+			    <label for="searchInputUsername">用户名：</label>
+			    <input type="text" name="username" class="form-control" id="searchInputUsername" placeholder="请输入用户名...">
+			  </div>
+			  <div class="form-group search-ct">
+			    <label for="searchInputTel">手机号码：</label>
+			    <input type="number" name="tel" class="form-control" id="searchInputTel" placeholder="请输入手机号码...">
+			  </div>
+			  <div class="form-group search-ct">
+			    <label for="searchInputEmail">Email:</label>
+			    <input type="email" name="email" class="form-control" id="searchInputEmail" placeholder="请输入邮箱...">
+			  </div>
+			  <button type="submit" class="btn btn-info search-ct"><i class="fa fa-search" aria-hidden="true">查询</i></button>
+			</form>
+		</div>
+		<div class="row">
+			<a href="{:url('root/addRoot')}" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true">添加管理员</i></a>
+		</div>
+		<hr>
+		<div class="row">
+
+			<!-- table -->
+			<table class="table table-bordered table-hover text-center">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>用户名</th>
+						<th>昵称</th>
+						<th>Email</th>
+						<th>手机号码</th>
+						<th>上次登录时间</th>
+						<th>最后登录Ip地址</th>
+						<th>创建时间</th>
+						<th>更新时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					{volist name="DataRoot" id="v"}
+					<tr>
+						<td>{$v.id}</td>
+						<td>{$v.username}</td>
+						<td>{$v.nicename}</td>
+						<td>{$v.email}</td>
+						<td>{$v.tel}</td>
+						<td>{$v.last_login_time|date="Y-m-d H:i:s",###}</td>
+						<td>{$v.last_login_ip}</td>
+						<td>{$v.create_time|date="Y-m-d H:i:s",###}</td>
+						<td>{$v.update_time|date="Y-m-d H:i:s",###}</td>
+						<td>
+							<a class="getid" href="{:url('admin/Root/editRoot',['id'=>$v['id']]);}">编辑</a>
+							<a href="{:url('admin/Root/deleteRoot',['id'=>$v['id']])}">删除</a>
+						</td>
+					</tr>
+					{/volist}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	 <!-- jQuery -->
+    <script type="text/javascript" src="__ADMIN__/js/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script type="text/javascript" src="__ADMIN__/plug/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

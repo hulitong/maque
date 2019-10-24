@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>麻雀巢穴</title>
+	<!-- 重置浏览器样式 -->
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/css/reset.css"/>
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="__ADMIN__/plug/bootstrap-4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__ADMIN__/plug/font-awesome-4.7.0/css/font-awesome.css">
+	
+    <link rel="stylesheet" href="__ADMIN__/css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="container-fullbox">
+		
+        <!-- 左侧边栏列表 -->
+        <div class="left_aside">
+            <ul id="nav_lists">
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                            <div class="title-item">用户管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="{:url('root/index')}" target="hlt">用户列表</a></dd>
+                        <dd><a href="pages/User/user_power.html" target="hlt">权限管理</a></dd>
+                        <dd><a href="{:url('root/role')}" target="hlt">角色管理</a></dd>
+                        <dd><a href="#" target="hlt">职位管理</a></dd>
+                        <dd><a href="#" target="hlt">Vip用户</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+                            <div class="title-item">订单管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#"><i class="fa fa-fire"></i> 新订单</a></dd>
+                        <dd><a href="#">历史订单</a></dd>
+                        <dd><a href="#">异常订单</a></dd>
+                        <dd><a href="#">财务结算</a></dd>
+                        <dd><a href="#">信息管理</a></dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-chain" aria-hidden="true"></i></div>
+                            <div class="title-item">评价管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">未读邮件</a></dd>
+                        <dd><a href="#">留言管理</a></dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-envira" aria-hidden="true"></i></div>
+                            <div class="title-item">文章管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">发布文章</a></dd>
+                        <dd><a href="#">文章列表</a></dd>
+                        <dd><a href="#">文章分类</a></dd>
+                        <dd><a href="#">发布文章</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
+                            <div class="title-item">产品管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">产品列表</a></dd>
+                        <dd><a href="#">采购产品</a></dd>
+                        <dd><a href="#">采购物料</a></dd>
+                        <dd><a href="#">销毁产品</a></dd>
+                        <dd><a href="#">添加产品</a></dd>
+                        <dd><a href="#">产品库存</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-image" aria-hidden="true"></i></div>
+                            <div class="title-item">图片管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">轮播图</a></dd>
+                        <dd><a href="#">广告管理</a></dd>
+                        <dd><a href="#">底部广告</a></dd>
+                        <dd><a href="#">AD规则</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-skyatlas" aria-hidden="true"></i></div>
+                            <div class="title-item">小程序管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">轮播图</a></dd>
+                        <dd><a href="#">九宫格管理</a></dd>
+                        <dd><a href="#">产品管理</a></dd>
+                        <dd><a href="#">用户管理</a></dd>
+                        <dd><a href="#">地址管理</a></dd>
+                        <dd><a href="#">订单管理</a></dd>
+                        <dd><a href="#">财务管理</a></dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+                            <div class="title-item">公众号管理</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">轮播图</a></dd>
+                        <dd><a href="#">九宫格管理</a></dd>
+                        <dd><a href="#">产品管理</a></dd>
+                        <dd><a href="#">用户管理</a></dd>
+                        <dd><a href="#">地址管理</a></dd>
+                        <dd><a href="#">订单管理</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="lt_title">
+                            <div class="firsticon-itme"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                            <div class="title-item">系统设置</div>
+                            <div class="secondicon_itme"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                        </dt>
+                        <dd><a href="#">UI配置</a></dd>
+                        <dd><a href="#">微信公众号</a></dd>
+                        <dd><a href="#">数据库设置</a></dd>
+                        <dd><a href="#">秘密</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 右侧内容区域 -->
+        <div class="container-fluid main">
+			
+			<!-- 顶部标题栏 -->
+            <div class="main_header">
+                <div class="header_left">
+                    <div class="navicon">
+                    	<i class="fa fa-navicon"></i>
+                    </div>
+                    <div class="header-tags header_addtags">
+                    	<span><a href="{:url('Index/show');}" target="hlt"><i class="fa fa-home" aria-hidden="true">首页</i></a></span>
+                    </div>
+                    <div class="tags_urls">
+                    	<i class="fa fa-search search-btn"></i>
+                        <input type="search" name="" placeholder="请搜索....">
+                    </div>
+                </div>
+				
+                <div class="header_right">
+                    <ul class="header_rt_lists">
+                        <li class="rt_lists_items">
+                        	<i class="fa fa-commenting-o" aria-hidden="true"></i>
+                        </li>
+                        <li class="rt_lists_items">
+                        	<i class="fa fa-user-md" aria-hidden="true"></i>
+                        </li>
+                        <li class="rt_lists_items">
+                        	<i class="fa fa-chrome" aria-hidden="true"></i>
+                        </li>
+                        <li class="rt_lists_items">
+                        	<i class="fa fa-chain" aria-hidden="true"></i>
+                        </li>
+                        <li class="rt_lists_items adminShowHide">
+                    		<div class="accoountinfo">{$Request.session.username} <i class="fa fa-angle-down down_tags"></i></div>
+                    		<ul class="userinfo">
+                    		  <li><a href="#">基本资料</a></li>
+                    		  <li><a href="#">修改密码</a></li>
+                    		  <li><a href="{:url('Login/checkOut')}">退出</a></li>
+                    		</ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           <!-- 主要内容区域 -->
+		   <div class="hlt_main_content">
+                <iframe name="hlt" scrolling="yes" frameborder="0" src="{:url('Index/show');}" id="iframestyle"></iframe>
+           </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="__ADMIN__/js/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script type="text/javascript" src="__ADMIN__/plug/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+	
+
+    <script>
+		
+        $(function () {
+
+            // 获取高度,添加高度
+            $document = $(window).height();
+            $('.left_aside').innerHeight($document);
+
+
+            var $dd = $('#nav_lists li dl dd');
+
+            $('#nav_lists li').each(function (i) {
+                var c = 0;
+                $('.lt_title').eq(i).click(function () {
+
+                	// 添加链接
+                	var pathHtmlone=$(this).find(".title-item");
+           
+                    if (c == 0) {
+                        $(this).nextAll('dd').show("slow");
+                        $('#nav_lists li').eq(i).find('.secondicon_itme .fa').css({
+                            "transform":"rotate(-180deg)",
+                            "-webkit-transform":"rotate(-180deg)",
+                            "-ms-transform":"rotate(-180deg)",
+                            "-moz-transform":"rotate(-180deg)",
+                            "-o-transform":"rotate(-180deg)",
+                        });
+                        c = 1;
+                    } else {
+                        $(this).nextAll('dd').hide("fade");
+                        $('#nav_lists li').eq(i).find('.secondicon_itme .fa').css({
+                            "transform":"rotate(0deg)",
+                            "-webkit-transform":"rotate(0deg)",
+                            "-ms-transform":"rotate(0deg)",
+                            "-moz-transform":"rotate(0deg)",
+                            "-o-transform":"rotate(0deg)",
+                        });
+                        c = 0;
+                    }
+                });
+
+            });
+
+            
+            $('.adminShowHide').hover(
+                function () {
+                    $('.userinfo').show();
+                    $('.down_tags').css({
+                        "transform":"rotate(-180deg)",
+                         "-webkit-transform":"rotate(-180deg)",
+                          "-ms-transform":"rotate(-180deg)",
+                          "-o-transform":"rotate(-180deg)",
+                          "-moz-transform":"rotate(-180deg)",
+                    });
+                },
+                function () {
+                    $('.userinfo').hide();
+                    $('.down_tags').css("transform","rotate(0deg)");
+                }
+            );
+        })
+    </script>
+</body>
+
+</html>
